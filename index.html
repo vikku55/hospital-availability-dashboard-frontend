@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hospital Availability Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="app">
+
+<header class="site-header">
+  <div class="header-top">
+    <img src="https://cdn-icons-png.flaticon.com/512/2967/2967350.png" alt="Logo" class="logo" />
+    <h1>🏥 Real-Time Hospital Availability Dashboard</h1>
+  </div>
+    <button id="toggleDarkMode" class="dark-mode-toggle">🌙 Dark Mode</button>
+  <nav class="header-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#mapSection">Map</a></li>
+      <li><a href="admin.html">Admin</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+  <main>
+    <!-- 🔍 Filter Controls -->
+    <section class="filters">
+      <input type="text" id="search" placeholder="Search by hospital name or city..." />
+      <select id="filter-specialty">
+        <option value="">All Specialties</option>
+        <option value="ICU">ICU</option>
+        <option value="Ventilator">Ventilator</option>
+        <option value="Ventilator">Beds</option>
+        <option value="Cardiology">Cardiology</option>
+      </select>
+    </section>
+
+    <!-- 📊 Dashboard Display -->
+    <section class="dashboard">
+      <div class="hospital-list" id="hospitalList">
+        <!-- Hospital cards will load here -->
+      </div>
+      <!-- above your hospital list -->
+<section id="mapSection" class="map-section">
+  
+  <iframe  id="map" src="" frameborder="0" loading="lazy" ></iframe>
+</section>
+
+    </section>
+
+  </main>
+  </div>
+    <!-- …existing content… -->
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>About Us</h3>
+        <p>Real‑Time Hospital Availability Dashboard helps you find nearby hospitals with available beds, ICUs, and ventilators in seconds.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#mapSection">Map</a></li>
+          <li><a href="admin.html">Admin Login</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact" id="contact">
+        <h3>Contact</h3>
+        <p>123 Health St.<br/>New Delhi, India</p>
+        <p>Email: support@healthdash.com<br/>Phone: +91 98765 43210</p>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/facebook.svg" alt="Facebook"></a>
+          <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/twitter.svg" alt="Twitter"></a>
+          <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/linkedin.svg" alt="LinkedIn"></a>
+          <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/instagram.svg" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 HealthDash. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

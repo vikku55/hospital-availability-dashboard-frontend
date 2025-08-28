@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hospital Availability Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="app">
+
+<header class="site-header">
+  <div class="header-top">
+    <img src="https://cdn-icons-png.flaticon.com/512/2967/2967350.png" alt="Logo" class="logo" />
+    <h1>🏥 Real-Time Hospital Availability Dashboard</h1>
+
+  </div>
+  <button id="toggleDarkMode" class="dark-mode-toggle">🌙 Dark Mode</button>
+  <nav class="header-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#mapSection">Map</a></li>
+      <li><a href="admin.html">Admin</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+ <!-- 🔐 Admin Login -->
+    <section class="login-panel " id="loginPanel">
+      <h2>🔒 Admin Login</h2>
+      <form id="loginForm">
+        <label>Username: <input type="text" id="username" required></label>
+        <label>Password: <input type="password" id="password" required></label>
+        <button type="submit">Login</button>
+      </form>
+      <p id="loginError" style="color:red;"></p>
+    </section>
+
+    <!-- 🛠️ Admin Panel -->
+   <section class="admin-panel hidden"  id="adminPanel">
+      <h2>🛠️ Admin Panel (Update Hospital)</h2>
+      <form id="adminForm">
+  <div>
+    <label for="adminHospitalSelect">Hospital:</label>
+    <select id="adminHospitalSelect"></select>
+  </div>
+  <div>
+    <label for="bedsInput">Beds:</label>
+    <input type="number" id="bedsInput" />
+  </div>
+  <div>
+    <label for="icuInput">ICU:</label>
+    <input type="number" id="icuInput" />
+  </div>
+  <div>
+    <label for="ventilatorInput">Ventilators:</label>
+    <input type="number" id="ventilatorInput" />
+  </div>
+  <button type="submit">Update</button>
+</form>
+<h2>➕ Add New Hospital</h2>
+<form id="addHospitalForm">
+  <input type="text" id="newName" placeholder="Hospital Name" required />
+  <input type="text" id="newCity" placeholder="City" required />
+  <input type="number" id="newBeds" placeholder="Beds" required />
+  <input type="number" id="newICU" placeholder="ICU" required />
+  <input type="number" id="newVentilators" placeholder="Ventilators" required />
+  <input type="text" id="newSpecialties" placeholder="Specialties (comma separated)" required />
+  <input type="text" id="newMapUrl" placeholder="Google Map URL" required />
+  <input type="text" id="newImageUrl" placeholder="Image URL (optional)" />
+  <button type="submit">Add Hospital</button>
+</form>
+
+</section>
+
+    <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>About Us</h3>
+        <p>Real‑Time Hospital Availability Dashboard helps you find nearby hospitals with available beds, ICUs, and ventilators in seconds.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#hospitalList">Hospitals</a></li>
+          <li><a href="#mapSection">Map</a></li>
+          <li><a href="#loginPanel">Admin Login</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact" id="contact">
+        <h3>Contact</h3>
+        <p>123 Health St.<br/>New Delhi, India</p>
+        <p>Email: support@healthdash.com<br/>Phone: +91 98765 43210</p>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/facebook.svg" alt="Facebook"></a>
+          <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/twitter.svg" alt="Twitter"></a>
+          <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/linkedin.svg" alt="LinkedIn"></a>
+          <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/instagram.svg" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 HealthDash. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
