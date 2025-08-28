@@ -3,7 +3,7 @@ let hospitalData = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   // Fetch hospital data
-  fetch("http://localhost:5000/api/hospitals")
+  fetch("https://hospital-availability-dashboard-backend.onrender.com/api/hospitals")
     .then(res => res.json())
     .then(data => {
       hospitalData = data;
@@ -143,7 +143,7 @@ function handleAdminUpdate(e) {
     renderHospitals(hospitalData);
 
     // Save to backend
-    fetch("http://localhost:5000/api/update", {
+    fetch("https://hospital-availability-dashboard-backend.onrender.com/api/update", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(hospitalData)
@@ -199,7 +199,7 @@ function handleAddHospital(e) {
   renderHospitals(hospitalData);
   populateAdminSelect(hospitalData);
 
-  fetch("http://localhost:5000/api/update", {
+  fetch("https://hospital-availability-dashboard-backend.onrender.com/api/update", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(hospitalData)
@@ -249,7 +249,7 @@ function sendBookingEmail(event, hospitalName) {
     hospital: hospitalName
   };
 
-  fetch("http://localhost:5000/api/book", {
+  fetch("https://hospital-availability-dashboard-backend.onrender.com/api/book", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
